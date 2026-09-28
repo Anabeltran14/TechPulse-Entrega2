@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TechPulse</title>
+    <!-- Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        techBg: '#0f111a',
+                        techCard: '#1a1d2d',
+                        techAccent: '#4f46e5'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-techBg text-gray-200 font-sans antialiased">
+
+    <!-- Header y Navegación -->
+    <header class="bg-techCard border-b border-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-techAccent rounded-md flex items-center justify-center font-bold text-white">TP</div>
+                <h1 class="text-xl font-bold text-white">TechPulse</h1>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium items-center">
+                <a href="index.html" class="hover:text-techAccent transition">Inicio</a>
+                <a href="noticias.html" data-nav="Desarrollo Web" class="nav-link hover:text-techAccent transition">Desarrollo Web</a>
+                <a href="noticias.html" data-nav="Gestión" class="nav-link hover:text-techAccent transition">Gestión</a>
+                <a href="noticias.html" data-nav="Arquitectura" class="nav-link hover:text-techAccent transition">Arquitectura</a>
+                <a href="noticias.html" data-nav="Inteligencia Artificial" class="nav-link hover:text-techAccent transition">IA</a>
+                <a href="contacto.html" class="hover:text-techAccent transition">Contacto</a>
+                
+                <!-- Nuevo botón de Mis Favoritos -->
+                <a href="favoritos.html" class="bg-yellow-600/20 text-yellow-500 hover:bg-yellow-600 hover:text-white px-4 py-1.5 rounded-full transition flex items-center gap-2 border border-yellow-600/30">
+                    ★ Mis Favoritos
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor RSS -->
+    <main class="container mx-auto px-4 py-16 max-w-3xl">
+        <div class="bg-techCard p-8 md:p-12 rounded-2xl border border-gray-800 shadow-2xl">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">Suscripción RSS</h2>
+            <p class="text-gray-400 mb-8 text-center leading-relaxed">Mantente actualizado con nuestras últimas publicaciones sin necesidad de entrar a la web. Añade nuestro feed a tu lector favorito (como Feedly, Inoreader o tu propio lector de consola).</p>
+            
+            <div class="bg-techBg border border-gray-700 p-4 rounded-lg flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-orange-500 text-2xl">📻</span>
+                    <code class="text-techAccent text-sm md:text-base">https://techpulse.com/feed.xml</code>
+                </div>
+                <button onclick="alert('¡Enlace RSS copiado al portapapeles!')" class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-medium px-4 py-2 rounded transition">
+                    Copiar URL
+                </button>
+            </div>
+        </div>
+    </main>
+    
+   <!-- Footer -->
+    <footer class="bg-techCard border-t border-gray-800 pt-12 pb-6 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
+                
+                <!-- Izquierda: Logo y descripción -->
+                <div class="md:w-1/3">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 bg-techAccent rounded-md flex items-center justify-center font-bold text-white text-xs">TP</div>
+                        <h2 class="text-lg font-bold text-white">TechPulse</h2>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Periodismo tecnológico riguroso para equipos de desarrollo, arquitectos de sistemas y líderes de producto.
+                    </p>
+                </div>
+
+                <!-- Derecha: Enlaces (Secciones y Empresa) -->
+                <div class="flex gap-16 md:w-1/2 md:justify-end">
+                    
+                    <!-- Columna Secciones -->
+                    <div>
+                        <h3 class="text-techAccent font-bold text-xs uppercase tracking-wider mb-4">Secciones</h3>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="noticias.html" class="hover:text-white transition">Desarrollo Web</a></li>
+                            <li><a href="noticias.html" class="hover:text-white transition">Gestión</a></li>
+                            <li><a href="noticias.html" class="hover:text-white transition">Arquitectura</a></li>
+                            <li><a href="noticias.html" class="hover:text-white transition">IA & ML</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Columna Empresa -->
+                    <div>
+                        <h3 class="text-techAccent font-bold text-xs uppercase tracking-wider mb-4">Empresa</h3>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="sobre-nosotros.html" class="hover:text-white transition">Sobre nosotros</a></li>
+                            <li><a href="contacto.html" class="hover:text-white transition">Contacto</a></li>
+                            <li><a href="colabora.html" class="hover:text-white transition">Colabora</a></li>
+                            <li><a href="rss.html" class="hover:text-white transition">RSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Línea separadora, Copyright y Redes -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 TechPulse. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Twitter/X</a>
+                    <a href="https://co.linkedin.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">LinkedIn</a>
+                    <a href="https://github.com/?locale=es-419" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

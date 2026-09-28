@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - TechPulse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { techBg: '#0f111a', techCard: '#1a1d2d', techAccent: '#4f46e5' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-techBg text-gray-200 font-sans antialiased">
+
+    <!-- Header y Navegación -->
+    <header class="bg-techCard border-b border-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-techAccent rounded-md flex items-center justify-center font-bold text-white">TP</div>
+                <h1 class="text-xl font-bold text-white">TechPulse</h1>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium items-center">
+                <a href="index.html" class="hover:text-techAccent transition">Inicio</a>
+                <a href="noticias.html" data-nav="Desarrollo Web" class="nav-link hover:text-techAccent transition">Desarrollo Web</a>
+                <a href="noticias.html" data-nav="Gestión" class="nav-link hover:text-techAccent transition">Gestión</a>
+                <a href="noticias.html" data-nav="Arquitectura" class="nav-link hover:text-techAccent transition">Arquitectura</a>
+                <a href="noticias.html" data-nav="Inteligencia Artificial" class="nav-link hover:text-techAccent transition">IA</a>
+                <a href="contacto.html" class="hover:text-techAccent transition">Contacto</a>
+                
+                <!-- Nuevo botón de Mis Favoritos -->
+                <a href="favoritos.html" class="bg-yellow-600/20 text-yellow-500 hover:bg-yellow-600 hover:text-white px-4 py-1.5 rounded-full transition flex items-center gap-2 border border-yellow-600/30">
+                    ★ Mis Favoritos
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor del Newsletter -->
+    <main class="container mx-auto px-4 py-20 max-w-2xl text-center">
+        <div class="bg-techCard p-10 md:p-14 rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden">
+            <!-- Brillo de fondo estético -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-techAccent/20 blur-[80px] rounded-full pointer-events-none -z-10"></div>
+            
+            <h2 class="text-4xl font-extrabold text-white mb-4 tracking-tight">Recibe la señal, <span class="text-techAccent">ignora el ruido.</span></h2>
+            <p class="text-gray-400 mb-8 text-lg leading-relaxed">Únete a más de 15,000 profesionales tech. Te enviaremos un resumen semanal con los análisis más profundos sobre desarrollo, arquitectura e IA. Cero spam.</p>
+            
+            <form id="form-newsletter" class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+                <input type="email" id="email-news" required placeholder="tu@correo.com" class="w-full sm:w-2/3 bg-techBg border border-gray-700 rounded-lg px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-techAccent">
+                <button type="submit" class="w-full sm:w-1/3 bg-techAccent hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition shadow-lg shadow-indigo-500/20 whitespace-nowrap">
+                    Suscribirme
+                </button>
+            </form>
+
+            <!-- Mensaje de éxito oculto -->
+            <div id="mensaje-news" class="hidden mt-6 text-green-400 font-medium bg-green-900/30 py-3 rounded-lg border border-green-800/50">
+                ¡Gracias por suscribirte! Revisa tu bandeja de entrada.
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-techCard border-t border-gray-800 pt-12 pb-6 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
+                <div class="md:w-1/3">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 bg-techAccent rounded-md flex items-center justify-center font-bold text-white text-xs">TP</div>
+                        <h2 class="text-lg font-bold text-white">TechPulse</h2>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">Periodismo tecnológico riguroso para equipos de desarrollo, arquitectos de sistemas y líderes de producto.</p>
+                </div>
+                <div class="flex gap-16 md:w-1/2 md:justify-end">
+                    <div>
+                        <h3 class="text-techAccent font-bold text-xs uppercase tracking-wider mb-4">Secciones</h3>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="noticias.html" class="hover:text-white transition">Desarrollo Web</a></li>
+                            <li><a href="noticias.html" class="hover:text-white transition">Gestión</a></li>
+                            <li><a href="noticias.html" class="hover:text-white transition">Arquitectura</a></li>
+                            <li><a href="noticias.html" class="hover:text-white transition">IA & ML</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-techAccent font-bold text-xs uppercase tracking-wider mb-4">Empresa</h3>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="sobre-nosotros.html" class="hover:text-white transition">Sobre nosotros</a></li>
+                            <li><a href="contacto.html" class="hover:text-white transition">Contacto</a></li>
+                            <li><a href="colabora.html" class="hover:text-white transition">Colabora</a></li>
+                            <li><a href="rss.html" class="hover:text-white transition">RSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 TechPulse. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="https://x.com/?lang=es" target="_blank" class="hover:text-white transition">Twitter/X</a>
+                    <a href="https://co.linkedin.com/" target="_blank" class="hover:text-white transition">LinkedIn</a>
+                    <a href="https://github.com/?locale=es-419" target="_blank" class="hover:text-white transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script rápido para la interacción del formulario local -->
+    <script>
+        document.getElementById('form-newsletter').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('mensaje-news').classList.remove('hidden');
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('mensaje-news').classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
